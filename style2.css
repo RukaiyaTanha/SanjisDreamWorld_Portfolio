@@ -1,0 +1,117 @@
+/* ====== GENERAL ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+/* ====== SUB-HEADER ====== */
+.sub-header {
+  background: url("images/certificates/23.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+}
+.sub-header1 {
+  background: url("images/showpieces/1.png") center/cover no-repeat;
+  color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+}
+.sub-header2 {
+  background: url("images/3dclay/5.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+}
+.sub-header3 {
+  background: url("images/artbook/1.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+}
+.sub-header4 {
+  background: url("images/painting/1.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+}
+/* Transparent overlay for readability */
+.sub-header::before,.sub-header1::before,.sub-header2::before,.sub-header3::before,.sub-header4::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15, 23, 42, 0.7); /* dark overlay */
+  z-index: 1;
+}
+.sub-header h1,.sub-header .btn,
+.sub-header1 h1,.sub-header1 .btn,
+.sub-header2 h1,.sub-header2 .btn,
+.sub-header3 h1,.sub-header3 .btn,
+.sub-header4 h1,.sub-header4 .btn {
+  position: relative;
+  z-index: 2; /* stays above overlay */
+}
+.sub-header .btn,.sub-header1 .btn,.sub-header2 .btn,.sub-header3 .btn,.sub-header4 .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: rgba(225, 29, 72, 0.9); /* transparent red */
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.sub-header .btn:hover, .sub-header1 .btn:hover,.sub-header2 .btn:hover,.sub-header3 .btn:hover,.sub-header4 .btn:hover {
+  background: rgba(190, 18, 60, 0.95);
+}
+/* ====== CERTIFICATES PAGE ====== */
+.certificates-page {
+  padding: 3rem 0;
+}
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+.cert-item {
+  text-align: center;
+}
+.cert-item img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.cert-item p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

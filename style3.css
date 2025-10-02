@@ -1,0 +1,194 @@
+/* ====== GLOBAL ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fcfcfc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0f172a;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo span {
+  color: #e11d48;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #e11d48;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ====== MOBILE NAV ====== */
+@media (max-width: 768px) {
+  .nav-links {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background: #0f172a;
+  flex-direction: column;
+  width: 200px;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+  .nav-links.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+  .menu-toggle {
+    display: block;
+  }
+  #hero {
+    height: auto;
+    padding: 120px 1rem 80px; /* extra padding so text isn’t squeezed */
+    background-position: center top; /* show upper part of image */
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-image {
+    margin-bottom: 20px;
+  }
+  .about-text h2 {
+    font-size: 1.5rem; /* smaller but readable */
+  }
+  .about-text p {
+    font-size: 0.95rem; /* slightly smaller */
+    line-height: 1.5;
+  }
+  .center-btn .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ====== JOURNEY SECTION ====== */
+#journey {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.journey-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.journey-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.journey-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.journey-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1024px) {
+  .journey-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-card p {
+    font-size: 0.95rem;
+  }
+}
