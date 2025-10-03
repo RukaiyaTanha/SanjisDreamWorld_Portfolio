@@ -6,7 +6,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
-  background: #fcfcfc;
+  background: #e8eaed;
   color: #1e293b;
   line-height: 1.6;
   overflow-x: hidden; /* prevent horizontal scroll */
@@ -344,7 +344,7 @@ img {
 /* ====== GALLERY ====== */
 #gallery {
   padding: 80px 0;
-  background: #fff;
+  background: #e8eaed;
 }
 
 .gallery-grid {
@@ -459,7 +459,7 @@ footer {
   }
   .nav-links {
     position: absolute;
-    top: 70px;
+    top: 30px;
     right: 0;
     background: #0f172a;
     flex-direction: column;
@@ -467,7 +467,7 @@ footer {
     padding: 1rem;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.7s ease, right 0.5s ease;
+    transition: opacity 0.3s ease, right 0.3s ease;
   }
   .nav-links.show {
     opacity: 1;
@@ -516,12 +516,4 @@ footer {
   }
 }
 
-/* Extra small screens */
-@media (max-width: 480px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-  .center-btn .btn {
-    flex: 1 1 100%;
-  }
-}
+
